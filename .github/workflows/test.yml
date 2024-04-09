@@ -1,0 +1,26 @@
+name: My First Workflow File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  package_installation_workflow:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: echo 
+        run: echo "Hello World"
+        
+      - name: Install a package
+        run: sudo apt install plocate -y 
+
+  another_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Another step
+        run: echo "This is another job"
+
+
